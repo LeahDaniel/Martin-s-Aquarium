@@ -1,0 +1,34 @@
+.harvest--locations {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 4%;
+}
+
+.harvest--locations h2 {
+    text-align: center;
+}
+
+.harvest--locations ul {
+    margin: 5% 25%;
+    padding: 10px;
+    background-color: rgb(133, 139, 157);
+}
+
+.harvest--locations li {
+    list-style: none;
+    
+}
+
+.harvest--locations-title {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.harvest--locations-details {
+    width: 33.33%;
+}
+
+
+
+

@@ -1,0 +1,17 @@
+.fish--care {
+    flex: 1;
+    padding: 0 2%;
+    background-color: rgba(0, 123, 255, 0.399);
+
+}
+
+.fish--care h2 {
+    text-align: center;
+    padding-top: 20px
+}
+
+.fish--care h4 {
+    padding: 15px 0;
+
+}
+

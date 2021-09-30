@@ -1,0 +1,45 @@
+@import url("./fish_care.css");
+@import url("./fish_details.css");
+@import url("./harvest_locations.css");
+@import url("./harvest_quotes.css");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', Arial;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(226, 241, 252);
+    padding: 50px 50px 0 50px;
+}
+
+.header {
+    text-align: center;
+    background-color: #039aff;
+}
+
+.header h1 {
+    padding: 3%;
+    color: white;
+}
+.fish {
+    display: flex;
+    margin-bottom: 3%;
+}
+
+.harvest {
+    background-color: rgb(51, 87, 140);
+    color: white;
+    /*Flex .harvest so that .harvest--quotes and .harvest--locations don't run into each other?*/
+}
+
+.footer {
+    background-color: #039aff;
+    color: rgb(24, 26, 33);
+    text-align: center;
+    padding: 3%;
+    margin-top: 3%;
+}

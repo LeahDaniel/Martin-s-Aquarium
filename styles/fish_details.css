@@ -1,0 +1,34 @@
+.fish--details {
+    flex: 2.5;
+    background-color: navy;
+    margin-right: 3%;
+}
+
+.fish--details h2 {
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+}
+
+.fish--details-species {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 4%;
+    padding: 2% 0;
+}
+
+.fish--details-species img {
+    width: 30%;
+}
+
+.fish--details-species ul {
+    align-self: center;
+    width: 30%;
+    padding: 10% 1%;
+    background-color: white;
+}
+
+.fish--details-species li  {
+    list-style: none;
+}

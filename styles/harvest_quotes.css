@@ -1,0 +1,20 @@
+.harvest--quotes-title {
+    text-align: center;
+    padding: 30px 0;
+}
+
+.harvest--quotes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.harvest--quotes p {
+    font-style: italic;
+    width: 15%;
+    padding: 10px;
+    text-align: center;
+    height: 100px;
+    background-color: white;
+    color: black;
+ }
