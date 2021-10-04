@@ -1,4 +1,4 @@
-.fish--details {
+.fish--list {
     flex: 2.5;
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     border: 4px solid rgb(27, 46, 74);
 }
 
-.fish--details h2 {
+.fish--list-h2 {
     text-align: center;
     color: black;
     font-size: 30px;
@@ -24,7 +24,7 @@
     margin-top: 32px;
 }
 
-.fish--details-species img {
+.fish--details-img {
     height: 220px;
     border: rgb(238, 243, 250) solid 4px;
 }
