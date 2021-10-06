@@ -1,8 +1,9 @@
 // Import the function that returns a copy of the fish array
 import { getFish } from './database.js'
-import {mostHolyFish } from './database.js'
-import {soldierFish} from './database.js'
-import {nonHolyFish} from './database.js'
+import {mostHolyFish } from './holyfish.js'
+import {soldierFish} from './holyfish.js'
+import {nonHolyFish} from './holyfish.js'
+import { FishHTML } from './fish.js'
 
 export const FishList = () => {
     // Invoke the function that you imported from the database module
@@ -12,55 +13,22 @@ export const FishList = () => {
     const nonHolyFishes = nonHolyFish();
 
     // Start building a string filled with HTML syntax
-    let htmlString = '<article class="fish--details">'
+    let htmlString = '<article class="fish--details">';
 
     // Create HTML representations of each fish here
-    for (const fish of holyFishes) {
-        htmlString += 
-        `<section class="fish--details-species">
-            <img class="fish--details-img" src="${fish.image}" alt="Image of ${fish.name}"/>
-            <div class="fish--details-species-list">
-                <ul>
-                    <li class="fish--species">Species: ${fish.species}</li>    
-                    <li class="fish--name">Name: ${fish.name}</li>
-                    <li class="fish--length">Length: ${fish.length} in</li>
-                    <li class="fish--location">Location: ${fish.location}</li>
-                    <li class="fish--diet">Diet: ${fish.diet}</li>
-                </ul>
-            </div>
-        </section>`
+    
+    const HTMLRepresentation = (fishLengthCategory) => {
+        for (const fish of fishLengthCategory) {
+            htmlString += FishHTML(fish)
+        } 
     }
-    for (const fish of soldierFishes) {
-        htmlString += 
-        `<section class="fish--details-species">
-            <img class="fish--details-img" src="${fish.image}" alt="Image of ${fish.name}"/>
-            <div class="fish--details-species-list">
-                <ul>
-                    <li class="fish--species">Species: ${fish.species}</li>    
-                    <li class="fish--name">Name: ${fish.name}</li>
-                    <li class="fish--length">Length: ${fish.length} in</li>
-                    <li class="fish--location">Location: ${fish.location}</li>
-                    <li class="fish--diet">Diet: ${fish.diet}</li>
-                </ul>
-            </div>
-        </section>`
-    }
-    for (const fish of nonHolyFishes) {
-        htmlString += 
-        `<section class="fish--details-species">
-            <img class="fish--details-img" src="${fish.image}" alt="Image of ${fish.name}"/>
-            <div class="fish--details-species-list">
-                <ul>
-                    <li class="fish--species">Species: ${fish.species}</li>    
-                    <li class="fish--name">Name: ${fish.name}</li>
-                    <li class="fish--length">Length: ${fish.length} in</li>
-                    <li class="fish--location">Location: ${fish.location}</li>
-                    <li class="fish--diet">Diet: ${fish.diet}</li>
-                </ul>
-            </div>
-        </section>`
-    }
-    htmlString += `</article>`
+    
+    HTMLRepresentation(holyFishes);
+    HTMLRepresentation(soldierFishes);
+    HTMLRepresentation(nonHolyFishes);
+
+
+    htmlString += `</article>`;
 
     return htmlString
 }
